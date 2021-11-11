@@ -1,0 +1,149 @@
+.catalog {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 200px;
+    flex-wrap: wrap;
+
+    @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+        padding: 0 25px;
+        max-width: 720px;
+    }
+
+    @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+        padding: 0 5px;
+        max-width: 320px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 35px 17px 0;
+        padding-top: 25px;
+        text-align: center;
+        width: 300px;
+
+        @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+            margin: 35px 10px 0;
+            padding-top: 25px;
+        }
+
+        @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+            margin: 25px 5px 0;
+            padding-top: 15px;
+        }
+
+        &__link {
+            transition: transform 0.3s ease;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+
+        &__image {
+            object-fit: contain;
+            margin-bottom: 35px;
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                width: 100%;
+            }
+
+            &--margin {
+                width: 100%;
+                height: 118px;
+                object-fit: scale-down;
+            }
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-family: "Samsung Sharp Sans";
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                font-size: 20px;
+            }
+
+            & span {
+                margin: 0 5px;
+                background-color: black;
+                height: 35px;
+                width: 3px;
+
+                @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                    height: 25px;
+                }
+            }
+        }
+
+        &__price {
+            display: flex;
+            &-old {
+                position: relative;
+                margin-right: 18px;
+                font-family: "Samsung Sharp Sans";
+                color: rgb(147, 149, 152);
+                font-size: 22px;
+                line-height: 40px;
+
+                @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                    font-size: 17px;
+                }
+                &::before {
+                    content: "";
+                    border-bottom: 2px solid black;
+                    position: absolute;
+                    left: -30px;
+                    width: 120px;
+                    height: 55%;
+                    transform: rotate(-9deg);
+
+                    @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                        width: 100px;
+                    }
+                }
+            }
+
+            &-new {
+                font-family: "Samsung Sharp Sans";
+                font-size: 26px;
+                line-height: 40px;
+
+                @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 136px;
+            height: 38px;
+            border: 2px solid black;
+            border-radius: 20px;
+            color: black;
+            transition: background-color 0.3s linear, color 0.3s linear;
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                width: 126px;
+                height: 35px;
+            }
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

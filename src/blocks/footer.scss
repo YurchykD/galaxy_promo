@@ -1,0 +1,16 @@
+.footer {
+        margin: 0 auto 35px;
+        font-size: 12px;
+        font-family: "SamsungOne";
+        color: rgb(123, 123, 123);
+        max-width: 1356px;
+
+        @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                max-width: 700px;
+        }
+
+        @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                max-width: 320px;
+                padding: 0 10px;
+        }
+}

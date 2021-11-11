@@ -1,0 +1,229 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+        flex-direction: column;
+        max-width: 720px;
+    }
+
+    @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+        flex-direction: column;
+        max-width: 320px;
+    }
+
+    &__image {
+        height: 640px;
+
+        @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+            display: none;
+        }
+
+        @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+            display: none;
+        }
+    }
+
+    &__image--720 {
+        display: none;
+
+        @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+            display: block;
+            max-width: 100%;
+            max-height: 1004px;
+            background-size: contain;
+        }
+
+        @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+            display: block;
+            max-width: 100%;
+            max-height: 1004px;
+            background-size: contain;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 1250px;
+        top: 597px;
+        width: 200px;
+        height: 20px;
+        font-family: "Samsung Sharp Sans";
+        font-weight: 700;
+
+        @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+            left: 530px;
+            top: 657px;
+        }
+
+        @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+            left: 180px;
+            top: 287px;
+            font-size: 12px;
+        }
+    }
+
+    &__content {
+        margin-left: 90px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 280px;
+
+        @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+            align-items: center;
+            margin: 25px 0;
+            width: 375px;
+        }
+
+        @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+            align-items: center;
+            margin: 25px 0;
+            width: 300px;
+        }
+
+        &-title {
+            font-family: "Samsung Sharp Sans";
+            font-weight: 700;
+            font-size: 52px;
+            margin-bottom: 28px;
+
+            @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &-logo {
+            max-width: 270px;
+            height: 56px;
+            margin-bottom: 19px;
+
+            @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                max-width: 235px;
+                height: 49px;
+                margin-bottom: 12px;
+            }
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                max-width: 230px;
+                height: 50px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-sale {
+            font-family: "Samsung Sharp Sans";
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 45px;
+
+            @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                font-size: 26px;
+                margin-bottom: 16px;
+            }
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            & strong {
+                font-size: 45px;
+
+                @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                    font-size: 35px;
+                }
+            }
+        }
+
+        &-oldprice {
+            position: relative;
+            font-family: "Samsung Sharp Sans";
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 36px;
+            color: rgb(147, 149, 152);
+
+            @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                font-size: 31px;
+                width: 150px;
+            }
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                font-size: 25px;
+            }
+
+            & strong {
+                font-size: 30px;
+
+                @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                    font-size: 20px;
+                }
+
+                @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                    font-size: 15px;
+                }
+            }
+
+            &::before {
+                content: "";
+                border-bottom: 2px solid black;
+                position: absolute;
+                left: 45px;
+                width: 120px;
+                height: 45%;
+                transform: rotate(-10deg);
+
+                @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                    left: 0px;
+                    width: 105px;
+                    height: 35%;
+                    transform: rotate(-9deg);
+                }
+
+                @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                    left: -35px;
+                    width: 105px;
+                    height: 45%;
+                    transform: rotate(-9deg);
+                }
+            }
+        }
+
+        &-newprice {
+            font-family: "Samsung Sharp Sans";
+            font-weight: 700;
+            font-size: 46px;
+
+            @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                font-size: 41px;
+            }
+
+            @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                font-size: 31px;
+            }
+
+            & strong {
+                font-size: 40px;
+
+                @media (min-width: $medium-min-width) and (max-width: $medium-max-width) {
+                    font-size: 25px;
+                }
+
+                @media (min-width: $small-min-width) and (max-width: $small-max-width) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,591 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MyriadPro";
+  src: url("./MyriadPro/MyriadPro-Regular.eot");
+  src: local("☺"), url("./MyriadPro/MyriadPro-Regular.woff") format("woff"), url("./MyriadPro/MyriadPro-Regular.ttf") format("truetype"), url("./MyriadPro/MyriadPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("./PTSerif/PTF55F.eot");
+  src: local("☺"), url("./PTSerif/PTF55F.woff") format("woff"), url("./PTSerif/PTF55F.ttf") format("truetype"), url("./PTSerif/PTF55F.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOne";
+  src: url("./SamsungOne/SamsungOne-400.eot");
+  src: local("☺"), url("./SamsungOne/SamsungOne-400.woff") format("woff"), url("./SamsungOne/SamsungOne-400.ttf") format("truetype"), url("./SamsungOne/SamsungOne-400.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOne";
+  src: url("./SamsungOne/SamsungOne-700.eot");
+  src: local("☺"), url("./SamsungOne/SamsungOne-700.otf") format("woff"), url("./SamsungOne/SamsungOne-700.ttf") format("truetype"), url("./SamsungOne/SamsungOne-700.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  src: url("./SamsungSharpSans/samsungsharpsans.eot");
+  src: local("☺"), url("./SamsungSharpSans/samsungsharpsans.woff") format("woff"), url("./SamsungSharpSans/samsungsharpsans.ttf") format("truetype"), url("./SamsungSharpSans/samsungsharpsans.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  src: url("./SamsungSharpSans/SamsungSharpSans-Bold.otf");
+  src: local("☺"), url("./SamsungSharpSans/SamsungSharpSans-Bold.woff") format("woff"), url("./SamsungSharpSans/SamsungSharpSans-Bold.ttf") format("truetype"), url("./SamsungSharpSans/SamsungSharpSans-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  src: url("./SamsungSharpSans/samsungsharpsans-medium.eot");
+  src: local("☺"), url("./SamsungSharpSans/samsungsharpsans-medium.woff") format("woff"), url("./SamsungSharpSans/samsungsharpsans-medium.ttf") format("truetype"), url("./SamsungSharpSans/samsungsharpsans-medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.page {
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul,
+li,
+p,
+span,
+h1,
+h2,
+h3,
+h4 {
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header {
+    flex-direction: column;
+    max-width: 720px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header {
+    flex-direction: column;
+    max-width: 320px;
+  }
+}
+.header__image {
+  height: 640px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__image {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__image {
+    display: none;
+  }
+}
+.header__image--720 {
+  display: none;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__image--720 {
+    display: block;
+    max-width: 100%;
+    max-height: 1004px;
+    background-size: contain;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__image--720 {
+    display: block;
+    max-width: 100%;
+    max-height: 1004px;
+    background-size: contain;
+  }
+}
+.header__label {
+  position: absolute;
+  left: 1250px;
+  top: 597px;
+  width: 200px;
+  height: 20px;
+  font-family: "Samsung Sharp Sans";
+  font-weight: 700;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__label {
+    left: 530px;
+    top: 657px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__label {
+    left: 180px;
+    top: 287px;
+    font-size: 12px;
+  }
+}
+.header__content {
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 280px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content {
+    align-items: center;
+    margin: 25px 0;
+    width: 375px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content {
+    align-items: center;
+    margin: 25px 0;
+    width: 300px;
+  }
+}
+.header__content-title {
+  font-family: "Samsung Sharp Sans";
+  font-weight: 700;
+  font-size: 52px;
+  margin-bottom: 28px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+.header__content-logo {
+  max-width: 270px;
+  height: 56px;
+  margin-bottom: 19px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-logo {
+    max-width: 235px;
+    height: 49px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-logo {
+    max-width: 230px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+}
+.header__content-sale {
+  font-family: "Samsung Sharp Sans";
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 45px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-sale {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-sale {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+.header__content-sale strong {
+  font-size: 45px;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-sale strong {
+    font-size: 35px;
+  }
+}
+.header__content-oldprice {
+  position: relative;
+  font-family: "Samsung Sharp Sans";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: #939598;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-oldprice {
+    font-size: 31px;
+    width: 150px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-oldprice {
+    font-size: 25px;
+  }
+}
+.header__content-oldprice strong {
+  font-size: 30px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-oldprice strong {
+    font-size: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-oldprice strong {
+    font-size: 15px;
+  }
+}
+.header__content-oldprice::before {
+  content: "";
+  border-bottom: 2px solid black;
+  position: absolute;
+  left: 45px;
+  width: 120px;
+  height: 45%;
+  transform: rotate(-10deg);
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-oldprice::before {
+    left: 0px;
+    width: 105px;
+    height: 35%;
+    transform: rotate(-9deg);
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-oldprice::before {
+    left: -35px;
+    width: 105px;
+    height: 45%;
+    transform: rotate(-9deg);
+  }
+}
+.header__content-newprice {
+  font-family: "Samsung Sharp Sans";
+  font-weight: 700;
+  font-size: 46px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-newprice {
+    font-size: 41px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-newprice {
+    font-size: 31px;
+  }
+}
+.header__content-newprice strong {
+  font-size: 40px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .header__content-newprice strong {
+    font-size: 25px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .header__content-newprice strong {
+    font-size: 20px;
+  }
+}
+
+.catalog {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 200px;
+  flex-wrap: wrap;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .catalog {
+    padding: 0 25px;
+    max-width: 720px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog {
+    padding: 0 5px;
+    max-width: 320px;
+  }
+}
+.catalog .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 35px 17px 0;
+  padding-top: 25px;
+  text-align: center;
+  width: 300px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .catalog .card {
+    margin: 35px 10px 0;
+    padding-top: 25px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card {
+    margin: 25px 5px 0;
+    padding-top: 15px;
+  }
+}
+.catalog .card__link {
+  transition: transform 0.3s ease;
+}
+.catalog .card__link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.catalog .card__image {
+  object-fit: contain;
+  margin-bottom: 35px;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card__image {
+    width: 100%;
+  }
+}
+.catalog .card__image--margin {
+  width: 100%;
+  height: 118px;
+  object-fit: scale-down;
+}
+.catalog .card__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-family: "Samsung Sharp Sans";
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card__title {
+    font-size: 20px;
+  }
+}
+.catalog .card__title span {
+  margin: 0 5px;
+  background-color: black;
+  height: 35px;
+  width: 3px;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card__title span {
+    height: 25px;
+  }
+}
+.catalog .card__price {
+  display: flex;
+}
+.catalog .card__price-old {
+  position: relative;
+  margin-right: 18px;
+  font-family: "Samsung Sharp Sans";
+  color: #939598;
+  font-size: 22px;
+  line-height: 40px;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card__price-old {
+    font-size: 17px;
+  }
+}
+.catalog .card__price-old::before {
+  content: "";
+  border-bottom: 2px solid black;
+  position: absolute;
+  left: -30px;
+  width: 120px;
+  height: 55%;
+  transform: rotate(-9deg);
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card__price-old::before {
+    width: 100px;
+  }
+}
+.catalog .card__price-new {
+  font-family: "Samsung Sharp Sans";
+  font-size: 26px;
+  line-height: 40px;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card__price-new {
+    font-size: 20px;
+  }
+}
+.catalog .card__button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 136px;
+  height: 38px;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: black;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .catalog .card__button {
+    width: 126px;
+    height: 35px;
+  }
+}
+.catalog .card__button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 720px) and (max-width: 1439px) {
+  .section {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .section {
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 0 15px;
+  }
+}
+.section__title {
+  max-width: 890px;
+  margin: 70px auto 50px;
+  font-size: 35px;
+  line-height: 55px;
+  font-family: "Samsung Sharp Sans";
+  text-align: center;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .section__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .section__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.section__title p {
+  font-size: 48px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .section__title p {
+    font-size: 38px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .section__title p {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+.section__list {
+  margin: 0 auto 55px;
+  max-width: 1004px;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .section__list {
+    max-width: 320px;
+  }
+}
+.section__list-item {
+  font-size: 24px;
+  font-family: "PT Serif";
+  line-height: 35px;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .section__list-item {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.section__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 70px;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #084895;
+  font-size: 18px;
+  font-family: "PT Serif";
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s linear;
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .section__button {
+    width: 150px;
+    height: 50px;
+  }
+}
+.section__button:hover {
+  background-color: white;
+  color: #084895;
+  border: 3px solid #084895;
+}
+
+.footer {
+  margin: 0 auto 35px;
+  font-size: 12px;
+  font-family: "SamsungOne";
+  color: #7b7b7b;
+  max-width: 1356px;
+}
+@media (min-width: 720px) and (max-width: 1439px) {
+  .footer {
+    max-width: 700px;
+  }
+}
+@media (min-width: 320px) and (max-width: 719px) {
+  .footer {
+    max-width: 320px;
+    padding: 0 10px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
